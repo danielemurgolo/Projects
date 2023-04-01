@@ -12,5 +12,8 @@ ppmt = -npf.ppmt(rate / 12, per, years * 12, loan)
 
 plt.plot(per, ipmt, label="interests")
 plt.plot(per, ppmt, label="principal")
+plt.plot(per, np.cumsum(ipmt), label="cumulative interests")
+plt.plot(per, np.cumsum(ppmt), label="cumulative interests")
+
 plt.legend()
 plt.show()
